@@ -1,0 +1,40 @@
+version: '3.6'
+
+services:
+    discord_listener:
+        build:
+            context: discord_listener/
+        container_name: discord_listener
+        networks:
+          - network
+        environment:
+          - RABBITMQ_HOST=rabbitmq
+        restart: 'always'
+
+
+    donko_functions:
+        build:
+            context: donko_functions/
+        container_name: donko_functions
+        networks:
+          - network
+        environment:
+          - RABBITMQ_HOST=rabbitmq
+        restart: 'always'
+        
+    rabbitmq:
+        image: rabbitmq:3-management
+        ports:
+          # The standard AMQP protocol port
+          - '61613:61613'
+          # HTTP management UI
+          - '15672:15672'
+        networks: 
+          - network
+        container_name: rabbitmq
+        restart: 'always'
+
+networks:
+  network: {}
+
+  
