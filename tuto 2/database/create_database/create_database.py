@@ -30,17 +30,7 @@ def create_database(db_connection,db_name,cursor):
 
 def insert_data(cursor):
     print("insert")
-    cursor.execute('''INSERT INTO news (url,title,date,mo,category) VALUES
-    ('https://www.biobiochile.cl/noticias/futbol-internacional/chilenos-en-el-exterior/2021/10/21/carlos-palacios-ingreso-en-el-segundo-tiempo-en-empate-de-inter-ante-bragantino.shtml
-','Carlos Palacios ingresó en el segundo tiempo en empate de Inter ante Bragantino 
-','2021-10-21','biobiochile','deportes'),
-    ('https://www.biobiochile.cl/noticias/economia/actualidad-economica/2021/10/20/por-sexta-semana-consecutiva-suben-todas-las-bencinas-en-63-pesos-por-litros.shtml
-','Por sexta semana consecutiva suben todas las bencinas en 6,3 pesos por litro
-','2021-10-20','biobiochile','economia'),
-    ('https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2021/10/21/vicepdte-colegio-medico-si-aumenta-rapido-la-demanda-covid-19-no-alcanzaremos-a-responder.shtml
-','Vicepdte. Colegio Médico: "Si aumenta rápido la demanda Covid-19, no alcanzaremos a responder"
-','2021-10-21','biobiochile','salud');
-    ''')
+    cursor.execute('''INSERT INTO news (id,url,title,date,mo) VALUES (1,"leonews","leo.cl","titulo leo","2021-05-10","leobews")''')
     cursor.execute("COMMIT;")
 
 DATABASE = "tuto1"

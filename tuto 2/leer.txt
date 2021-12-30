@@ -1,0 +1,8 @@
+leer.txt
+
+ejecutar primero bash run.. de database
+ejecutar segundo bash run.. de api web
+
+
+
+
