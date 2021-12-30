@@ -11,7 +11,6 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-#meta: /news?from=2021-01-01&to=2021-01-31&category=sport
 #buscar en db por fecha: SELECT * FROM table WHERE date_column >= '2014-01-01' AND date_column <= '2015-01-01';
 #tas = db.query(models.Task).filter(created_at__range=[today, end_day]).all()
 # INSERT INTO news(id,title,date,url,mo) values(2,"leo test 2","2021-10-15","leo.cl.com","adasdsa");
