@@ -1,0 +1,4 @@
+bot que utiliza apis-web, json, request, se le pueden añadir más apis en el manager.py
+se detecta por medio de comandos discord en bot.py y los componentes se comunican entre si por medio de rabbitmq
+hay un error que me salio con rabbitmq, en el tema de los ports, hay fallos cuando lo ejecute en localhost y luego dentro de docker
+al parecer se ocupan los mismos puertos o algo asi(entran en conflicto decia la terminal), lo arregle cambiando el puerto en compose.yml
